@@ -124,6 +124,134 @@
             Lista de Exercícios para as aulas dia 30/10 e 31/10
             <a target="_blank" href="LISTA-EXERCICIOS_AULA-30-10-2025.pdf" style="background-color: red; color: white;">aqui</a>
           </p>
+		  
+		  <h2>Códigos/Resolvidos - Listas em Dart da aula de hoje 30/10</h2>
+		  
+		  <hr>
+		  
+		  <p>
+		  <pre>
+// exemploLista1.dart
+
+import 'dart:io';
+
+void main() {
+  var nomes = [];
+  var paises = ['Brasil', 'Argentina', 'Colômbia', 'Peru'];
+  List<String> cidades = ['São Paulo', 'Buenos Aires', 'Bogotá', 'Lima'];
+  List<double> notas = [9.5, 8.7, 7.8, 6.9];
+  List<int> idades = [25, 30, 22, 28];
+  List<bool> respostas = [true, false, true, false];
+  var valores = [7.5, 'Ana', 10, 'Carlos'];
+  stdout.writeln('Nomes: ${nomes.length}');
+  stdout.writeln('Países: ${paises.length}');
+  stdout.writeln('Cidades: ${cidades.length}');
+  stdout.writeln('Notas: ${notas.length}');
+  stdout.writeln('Idades: ${idades.length}');
+  stdout.writeln('Respostas: ${respostas.length}');
+  stdout.writeln('Valores: ${valores.length}');
+}
+		  
+		  </pre>
+		  </p>
+
+		  <hr>
+		  
+		  <p>
+		  <pre>
+// exemploLista2.dart
+
+void main() {
+  List<String> frutas = [];
+  print('A lista esta vazia? ${frutas.isEmpty}'); // true
+  frutas = ['Maçã', 'Banana', 'Laranja', 'Uva'];
+  print("Quantas frutas? ${frutas.length}");
+  print('$frutas'); // 'Maçã', 'Banana', 'Laranja', 'Uva'
+  print('${frutas[2]}'); // 'Laranja'
+  print('${frutas[1]}'); // 'Banana'
+  frutas[2] = 'Manga';
+  frutas[1] = 'Abacaxi';
+  print('$frutas'); // 'Maçã', 'Abacaxi', 'Manga', 'Uva'
+  frutas[0] = 'Melancia';
+  frutas[2] = 'Pera';
+  print('$frutas'); // 'Melancia', 'Abacaxi', 'Pera', 'Uva'
+  print('A lista esta vazia? ${frutas.isEmpty}'); //false
+}		  
+		  </pre>
+		  </p>
+
+		  <hr>
+		  
+		  <p>
+		  <pre>
+// exemploLista3.dart
+
+void main() {
+  List<String> nomes = ['Maria', 'João', 'Ana', 'Pedro'];
+  // Usando índices inteiros
+  print('Primeiro elemento: ${nomes[0]}');
+  print('Primeiro elemento: ${nomes[nomes.length - 1]}');
+  // Usando funções da lista
+  print('Primeiro elemento: ${nomes.first}');
+  print('Primeiro elemento: ${nomes.last}');
+}		  
+		  </pre>
+		  </p>
+
+		  <hr>
+		  
+		  <p>
+		  <pre>
+// exemploLista4.dart
+
+void main() {
+  List<String> nomes = ['Maria', 'João', 'Ana', 'Pedro', 'José'];
+
+  for (int i = 0; i < nomes.length; i++) {
+    print('Elemento da posição ${i + 1}: ${nomes[i]}');
+  }
+}		  
+		  </pre>
+		  </p>
+
+		  <hr>
+		  
+		  <p>
+		  <pre>
+// exemploLista5.dart
+
+void main() {
+  List<String> nomes = ['Maria', 'João', 'Ana', 'Pedro', 'José'];
+
+  for (var elemento in nomes) {
+    print('Nome: $elemento');
+    print('Posição (índice): ${nomes.indexOf(elemento)}');
+  }
+}
+		  
+		  </pre>
+		  </p>
+
+		  <hr>
+		  
+		  <p>
+		  <pre>
+// exemploLista6.dart
+
+void main() {
+  List<int> idades = [];
+  idades.add(12);
+  idades.add(14);
+  idades.add(11);
+  idades.add(15);
+  idades.add(21);
+  for (var idade in idades) {
+    int pos = idades.indexOf(idade);
+    print('Idade: $idade da posicao $pos');
+  }
+}		  
+		  </pre>
+		  </p>
 
         </div>
       </div>
